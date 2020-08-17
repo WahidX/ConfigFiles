@@ -42,7 +42,7 @@
 
 !! URxvt Appearance
 ! URxvt.font: 9x15,xft:Anonymous Pro:size=12
-URxvt.font: xft:Inconsolata-Bold:size=14,xft:TerminessTTFNerdFontMono:size=14
+URxvt.font: xft:Source Code Pro:style=Light,size=8,xft:TerminessTTFNerdFontMono:size=14
 ! URxvt.font:-xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
 ! URxvt.bold.font:-xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
 ! URxvt.italicFont: -*-rissole-*
