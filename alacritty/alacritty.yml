@@ -1,0 +1,20 @@
+font:
+  normal:
+    family: "MesloLGS NF"
+  size: 8
+
+
+dynamic_padding: false
+
+decorations: none
+
+background_opacity: 0.9
+
+cursor:
+  # Cursor style
+  #
+  # Values for `style`:
+  #   - ▇ Block
+  #   - _ Underline
+  #   - | Beam
+  style: Beam
