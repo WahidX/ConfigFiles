@@ -193,9 +193,9 @@ set $ws2 "2 "
 set $ws3 "3 "
 set $ws4 "4 "
 set $ws5 "5 "
-set $ws6 "6 "
+set $ws6 "6 "
 set $ws7 "7 "
-set $ws8 "8 "
+set $ws8 "8 🎵"
 
 
 
@@ -367,7 +367,7 @@ set_from_resource $term_color15    color15
 
 
 bar {
-	i3bar_command i3bar
+	i3bar_command i3bar --transparency
 	status_command i3status
 	position top
 	mode hide
@@ -382,8 +382,8 @@ bar {
 	strip_workspace_numbers no
 
     colors {
-        background #222D31
-        statusline #F9FAF9
+        background #222D310
+        statusline #F9FAF90
         separator  #454947
 
 #                      border  backgr. text
