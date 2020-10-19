@@ -19,7 +19,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-
+exec_always --no-startup-id nvidia-settings -a "[gpu:0]/GpuPowerMizerMode=0"
 
 
 # Plasma compatibility improvements
@@ -474,7 +474,7 @@ mode "$mode_gaps_outer" {
 
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 
 
 # picom for transparency
