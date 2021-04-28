@@ -3,10 +3,9 @@
 
 
 # Autostart applications
-exec --no-startup-id nitrogen --restore; picom -b
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id signal
-
-
+exec --no-startup-id flameshot &
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
@@ -89,8 +88,9 @@ bindsym $mod+Shift+q kill
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Application shortcuts :
-bindsym $mod+F2 exec firefox
-bindsym $mod+F3 exec dolphin
+# bindsym $mod+F2 exec firefox
+# bindsym $mod+F3 exec dolphin
+# bindsym $mod+shift+p exec flameshot gui
 # bindsym $mod+F3 exec ranger
 # bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 # bindsym $mod+F5 exec terminal -e 'mocp'
@@ -174,12 +174,13 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
+
 # Workspace names
 set $ws1 "1 "
 set $ws2 "2 "
 set $ws3 "3 "
 set $ws4 "4 📁"
-set $ws5 "5 🖥"
+set $ws5 "5 F"
 set $ws6 "6 🖥"
 set $ws7 "7 "
 set $ws8 "8 🎵"
@@ -200,6 +201,10 @@ workspace $ws6 output $monitor_left_home
 
 workspace $ws7 output $primary_monitor
 workspace $ws8 output $primary_monitor
+
+
+# Floating workspace toggle
+for_window [workspace=$ws5] floating enable
 
 
 # move the whole workspace to the next output
@@ -493,4 +498,4 @@ bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'm
 
 # For KDE picom runs by KDE itself
 # picom for transparency
-# exec_always --no-startup-id picom -bc
+exec_always --no-startup-id picom -bc
