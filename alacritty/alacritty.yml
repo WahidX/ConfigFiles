@@ -1,14 +1,14 @@
 font:
   normal:
-    family: "MesloLGS NF"
-  size: 8
+    family: "Hack"
+  size: 11
 
 
 dynamic_padding: false
 
 decorations: none
 
-background_opacity: 0.9
+background_opacity: 0.8
 
 cursor:
   # Cursor style
