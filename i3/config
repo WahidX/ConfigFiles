@@ -66,9 +66,15 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start program launcher (REPLACED BY ROFI)
-#bindsym $mod+d exec --no-startup-id dmenu_recency
+# start program launcher
+# Dmenu
+# bindsym $mod+d exec --no-startup-id dmenu_recency
 
+# Rofi default
+# bindsym $mod+d exec rofi -show drun 
+
+# Rofi script from https://github.com/adi1090x/rofi#ribbon
+bindsym $mod+d exec ~/.config/rofi/launchers/misc/launcher.sh
 
 
 ################################################################################################
@@ -487,16 +493,11 @@ mode "$mode_gaps_outer" {
 #=======================
 
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show drun
+# Screenshot Bind (install scrot)
+# bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots/ && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
 
 
-
-#Screenshot Bind
-bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots/ && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
-
-
-# For KDE picom runs by KDE itself
+# For KDE picom runs by KDE itself in some distros
 # picom for transparency
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
