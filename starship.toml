@@ -1,0 +1,73 @@
+# ~/.config/starship.toml
+
+# Add a newline at the start of the prompt
+add_newline = true
+
+# Configure the prompt to use two lines
+[line_break]
+disabled = false
+
+# Configure the character module
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+# Show the current Kubernetes context name
+[kubernetes]
+symbol = "☸️ "
+style = "bold blue"
+disabled=false
+
+# Show the current directory path, shortened
+[directory]
+truncation_length = 2
+truncation_symbol = ".../"
+style = "bold yellow"
+
+# Show the current Git branch
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+# Show the Git status
+[git_status]
+conflicted = "🏳️ "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+untracked = "✚ "
+stashed = "📦 "
+modified = "✏️ "
+staged = "✔️ "
+renamed = "📛 "
+deleted = "❌ "
+style = "bold red"
+
+# Show the time taken for the last command
+[cmd_duration]
+min_time = 10  # Show command duration only if it exceeds 10 milliseconds
+format = "took [$duration]($style) "
+style = "bold cyan"
+show_milliseconds = true
+
+# Disable all other modules
+[package]
+disabled = false
+
+[python]
+disabled = false
+
+[nodejs]
+disabled = false
+
+[rust]
+disabled = false
+
+[golang]
+disabled = false
+
+[memory_usage]
+disabled = false
+
+[time]
+disabled = true
