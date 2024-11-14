@@ -17,7 +17,7 @@ $time\
 \n$character"""
 
 [directory]
-style = "fg:#e3e5e5 bg:#769ff0"
+style = "fg:#000000 bg:#769ff0"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -34,16 +34,18 @@ style = "bg:#394260"
 format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
 
 [git_status]
+format = '[[($all_status$ahead_behind )](fg:yellow bg:#394260)]($style)'
 style = "bg:#394260"
-format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
-
-# Adding detailed git status symbols for file changes
-staged = '[+${count}]'      # Shows the number of staged files, prefixed by '+'
-modified = '[!${count}]'    # Shows the number of modified files, prefixed by '!'
-deleted = '[✘${count}]'     # Shows the number of deleted files, prefixed by '✘'
-untracked = '[?${count}]'   # Shows the number of untracked files, prefixed by '?'
-renamed = '[~${count}]'     # Shows the number of renamed files, prefixed by '~'
-conflicted = '[✖️${count}]' # Shows the number of conflicted files, prefixed by '✖️'
+stashed = '\$${count}'
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕${count}"
+conflicted = "=${count}"
+deleted = "✘${count}"
+renamed = "»${count}"
+modified = "!${count}"
+staged = "+${count}"
+untracked = "?${count}"
 
 [nodejs]
 symbol = ""
